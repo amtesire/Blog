@@ -153,7 +153,7 @@ class Downvote(db.Model):
 
     id =  db.Column(db.Integer,primary_key=True)
     user_id = db.Column(db.Integer,db.ForeignKey('users.id'))
-    pitch_id = db.Column(db.Integer,db.ForeignKey('blogs.id'))
+    blog_id = db.Column(db.Integer,db.ForeignKey('blogs.id'))
     
 
     def save(self):

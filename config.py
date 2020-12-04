@@ -5,7 +5,7 @@ class Config:
     General Configuration parent class
     '''
     SECRET_KEY="002"
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://wecode:1999@localhost/pitch'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://wecode:1999@localhost/blog'
     UPLOADED_PHOTOS_DEST = 'app/static/photos'
     
     MAIL_SERVER = 'smtp.gmail.com'
