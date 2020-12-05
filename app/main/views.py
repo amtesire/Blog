@@ -102,9 +102,10 @@ def updateblog(blog_id):
 def comment(blog_id):
     blog = Blog.query.get(blog_id)
     comment = request.form.get('newcomment')
-    new_comment = Comment(comment = comment, user_id = current_user._get_current_object().id, blog_id=blog_id)
+    #user_id = current_user._get_current_object().id
+    new_comment = Comment(comment = comment, blog_id=blog_id)
     new_comment.save_comment()
-    return redirect(url_for('main.blog',id= blog.id))
+    return redirect(url_for('.comment',blog_id= blog_id))
 
 @main.route('/blog/<blog_id>/delete', methods=['POST'])
 @login_required
@@ -116,7 +117,7 @@ def del_post(blog_id):
     db.session.commit()
 
     flash('You have deleted your Blog succesfully')
-    return redirect(url_for('main.index'))
+    return redirect(url_for('.index'))
 
 @main.route('/user/<string:username>')
 def user_post(username):

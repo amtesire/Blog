@@ -18,7 +18,7 @@
 
 
 <!-- displaying posts -->
-<div class="container">
+<div class="container" style="background-image: url(Https://picsum.photos/1900/1267?grayscale);">
 <div class="row">
   <div class="col-md-8 land">
     <h2 class="text-center">Here you can let us know what you feel.</h2>
@@ -35,9 +35,8 @@
                       <p>{{blog.content }}</p>
                       <p>Posted on : {{blog.posted.strftime('%d-%m-%Y')}}</p>
                       
-                      <span><p class="btn btn-success">Comment</p></span>
-                      <span><p class="btn btn-primary">Like</p></span>
-                      <span><p class="btn btn-danger">Delete post</p></span>
+                      <a href="{url_for('.comment',blog.id)}"><span><p class="btn btn-success">Comment</p></span></a>
+                      <a href ="{{url_for('.index')}} "><span><p class="btn btn-danger">Delete</p></span></a>
                   </div>
               </div> 
               <hr>
