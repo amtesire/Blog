@@ -22,7 +22,7 @@
 * Writers can delete their post
 
 ## Known Bugs
-unfortunately the link doesn't not work the one deployed to heroku
+The button of comments and delete doesn't work unfortunately.
 
 ## Technologies Used
 * Python Version 3.6
@@ -31,8 +31,8 @@ unfortunately the link doesn't not work the one deployed to heroku
 * Bootstrap
 
 ## Live Link
-https://tesiblog.herokuapp.com/    the link deployed to heroku doesn't work.
-http://127.0.0.1:5000/             this is the link of how it looks like locally.
+https://tesiblog.herokuapp.com/
+
 ### License
 MIT License
 
